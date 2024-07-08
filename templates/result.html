@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <style>
+        .img{
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recognized Faces</h1>
+    <ul>
+        {% for face in faces %}
+            <li><img class="img" src="{{ url_for('uploaded_file', filename=image) }}"></li>
+            <li>{{ face }}</li>
+
+
+        {% endfor %}
+    </ul>
+    <a href="/">Go Back</a>
+</body>
+</html>

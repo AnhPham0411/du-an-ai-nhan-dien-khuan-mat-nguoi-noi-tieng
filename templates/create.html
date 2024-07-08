@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Folder</title>
+</head>
+<body>
+    <h1>Create Folder</h1>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="/create" method="post" enctype="multipart/form-data">
+        <div class="create">
+            <h4>Folder Name:</h4>
+            <input type="text" name="folder" placeholder="Enter folder name" required>
+            <h4>Image to Upload:</h4>
+            <input type="file" name="file" accept="image/*">
+            <br>
+            <input type="submit" value="Create">
+        </div>
+    </form>
+    <a href="/">Go Back</a>
+</body>
+</html>
